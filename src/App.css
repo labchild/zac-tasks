@@ -4,6 +4,8 @@
   --lt-orange: #d9a640;
   --orange: #d26632;
   --dark: #7e3c1c;
+  --denim: #00334f;
+  --lt-denim: #75c8ae;
   --brand-font: "bookman-jf-pro", serif;
   --fancy-font: italic;
   --text: "degular-text", sans-serif;
@@ -56,12 +58,58 @@
   font-family: "Margin", var(--fancy-font);
   font-size: 48px;
   font-weight: 300;
+  text-shadow: 0 2px rgba(0, 0, 0, 0.2);
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
   -moz-animation: scroll-left 10s linear infinite;
   -webkit-animation: scroll-left 10s linear infinite;
-  animation: bounce 10s linear infinite;
+  animation: bounce 15s linear infinite;
+}
+
+/* flyer info */
+.info {
+  border: var(--denim) 2px solid;
+  font-family: var(--text);
+  width: 75%;
+  margin: 0 auto 2rem;
+  padding: 0 1rem 1rem;
+  background-color: var(--lt-denim);
+  max-width: 900px;
+  color: var(--denim);
+}
+
+.info h3 {
+  padding-bottom: 5px;
+  margin: 1rem 0;
+  font-family: var(--brand-font);
+  width: 100%;
+  color: var(--denim);
+  border-bottom: var(--denim) 2px dotted;
+}
+
+.info p {
+  text-align: left;
+}
+
+.info span {
+  color: #fff;
+}
+
+table {
+  margin: 1rem auto;
+  padding: 0 10px;
+  text-align: left;
+  font-family: var(--brand-font);
+}
+
+td {
+  vertical-align: top;
+  padding: 5px 5px 0 0;
+}
+
+address {
+  font-style: normal;
 }
 
 /* form styles */
@@ -138,6 +186,10 @@ select:focus {
 
 .btn:active {
   transform: translate(0, 2%);
+}
+
+.hide {
+  display: none;
 }
 
 /* animatinos */
