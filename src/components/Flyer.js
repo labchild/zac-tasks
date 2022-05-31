@@ -40,13 +40,19 @@ function Flyer() {
                 <strong>where: </strong>
               </td>
               <td>
-                <address>
-                  Chilo's Greenwood
-                  <br />
-                  740 5th Ave
-                  <br />
-                  Brooklyn, NY 11221
-                </address>
+                <a
+                  href="https://www.chilosbk.com/chilos-greenwood"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <address>
+                    Chilo's Greenwood
+                    <br />
+                    740 5th Ave
+                    <br />
+                    Brooklyn, NY 11232
+                  </address>
+                </a>
               </td>
             </tr>
           </tbody>

@@ -113,6 +113,15 @@ address {
   font-style: normal;
 }
 
+.info a {
+  text-decoration: none;
+}
+
+.info a:hover,
+address:hover {
+  background-color: var(--neon);
+}
+
 /* form styles */
 form {
   border: 2px solid var(--dark);
