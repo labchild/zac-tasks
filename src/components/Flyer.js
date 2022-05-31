@@ -28,26 +28,28 @@ function Flyer() {
           his <em>early 30s</em>.
         </p>
         <table>
-          <tr>
-            <td>
-              <strong>when: </strong>
-            </td>
-            <td>Saturday June 11th 2022 at 3pm</td>
-          </tr>
-          <tr>
-            <td>
-              <strong>where: </strong>
-            </td>
-            <td>
-              <address>
-                Chilo's Greenwood
-                <br />
-                740 5th Ave
-                <br />
-                Brooklyn, NY 11221
-              </address>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <strong>when: </strong>
+              </td>
+              <td>Saturday June 11th 2022 at 3pm</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>where: </strong>
+              </td>
+              <td>
+                <address>
+                  Chilo's Greenwood
+                  <br />
+                  740 5th Ave
+                  <br />
+                  Brooklyn, NY 11221
+                </address>
+              </td>
+            </tr>
+          </tbody>
         </table>
         <p>
           Expect tacos, frozen margs, games, and good times.{" "}
@@ -64,6 +66,10 @@ function Flyer() {
             If you have game suggestions (card or drinking – remember, we'll be
             outdoors), bring it or send Lelah a note with your RSVP and she'll
             look into acquiring it.
+            <br />
+            <br />
+            This party will go until we get too tired and/or drunk to hang any
+            longer, so come when you can and leave only if you must.
           </p>
           <p>
             If it rains, the party will move to{" "}
@@ -79,7 +85,7 @@ function Flyer() {
             . It's just 2 blocks north of Chilo's.
             <br />
             <br />
-            Be sure to RSVP so Lelah knows who to contact with updates.
+            Be sure to RSVP, so Lelah knows who to contact with updates.
           </p>
         </div>
       </article>

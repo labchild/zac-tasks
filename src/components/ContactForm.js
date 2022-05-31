@@ -17,14 +17,12 @@ const ContactForm = () => {
       ...prevState,
       [e.target.name]: e.target.value,
     }));
-    console.log(formData);
   }
 
   // handle submit (RSVP) and send as email
   // async to fetch for response to mailer, read docs
   const handleRSVP = async (e) => {
     e.preventDefault();
-    console.log("rsvp'd");
     setbuttonState("sending...");
 
     const { name, email, rsvp, message } = e.target.elements;
@@ -34,7 +32,6 @@ const ContactForm = () => {
       rsvp: rsvp.value,
       message: message.value,
     };
-    console.log(details);
 
     let response = await fetch("/rsvp", {
       method: "POST",
@@ -45,15 +42,21 @@ const ContactForm = () => {
     });
     console.log(response);
 
-    setbuttonState("submit");
     let result = await response.json();
     alert(result.status);
+    setbuttonState("submit");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+      rsvp: "",
+    });
   };
 
   // return jsx
   return (
     <form onSubmit={handleRSVP}>
-        <h3 className="bookman">répondez s'il vous plaît</h3>
+      <h3 className="bookman">répondez s'il vous plaît</h3>
       <div className="formSection">
         <label htmlFor="name">who are you? </label>
         <input
@@ -98,9 +101,16 @@ const ContactForm = () => {
       </div>
       <div className="formSection">
         <label htmlFor="message">anything else you wanna say?</label>
-        <textarea id="message" name="message" />
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleStateChange}
+        />
       </div>
-      <button type="submit" className="bookman btn">{buttonState}</button>
+      <button type="submit" className="bookman btn">
+        {buttonState}
+      </button>
     </form>
   );
 };
