@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const router = express.Router();
+// const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const path = require("path");
@@ -41,7 +41,6 @@ app.post("/rsvp", (req, res) => {
   console.log("sending...");
 
   console.log(req.body);
-  console.log(req.body.email);
   let mailOptions = {
     from: req.body.details.email,
     to: process.env.EMAIL,
@@ -53,14 +52,12 @@ app.post("/rsvp", (req, res) => {
     `,
   };
 
-  console.log(mailOptions);
-
   transporter.sendMail(mailOptions, function (err, data) {
     if (err) {
       console.log("error: " + err);
     } else {
       console.log("email sent!");
-      res.json({ status: "email sent" });
+      res.json({ status: "thanks for letting Lelah know the deets!" });
     }
   });
 });
