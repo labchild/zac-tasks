@@ -94,6 +94,7 @@
 
 .info span {
   color: #fff;
+  cursor: pointer;
 }
 
 table {
