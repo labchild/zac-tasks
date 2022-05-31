@@ -43,13 +43,13 @@ app.post("/rsvp", (req, res) => {
   console.log(req.body);
   console.log(req.body.email);
   let mailOptions = {
-    from: req.body.email,
+    from: req.body.details.email,
     to: process.env.EMAIL,
-    subject: `zac party rsvp from: ${req.body.name}`,
+    subject: `zac party rsvp from: ${req.body.details.name}`,
     html: `
-    <h4>${req.body.name} is attending: ${req.body.rsvp ? "yep!" : "too bad"}</h4>
-    <p>email: <a href="mailto:${req.body.email}">${req.body.email}</a></p>
-    <p>notes: ${req.body.message}</p>
+    <h4>${req.body.details.name} is attending: ${req.body.details.rsvp ? "yep!" : "too bad"}</h4>
+    <p>email: <a href="mailto:${req.body.details.email}">${req.body.details.email}</a></p>
+    <p>notes: ${req.body.details.message}</p>
     `,
   };
 
