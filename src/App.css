@@ -1,38 +1,191 @@
+:root {
+  --neon: #a4d94c;
+  --y-green: #c3cb49;
+  --lt-orange: #d9a640;
+  --orange: #d26632;
+  --dark: #7e3c1c;
+  --brand-font: "bookman-jf-pro", serif;
+  --fancy-font: italic;
+  --text: "degular-text", sans-serif;
+}
 .App {
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* flyer styles */
+.flyer {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.visuals {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
+  position:absolute;
+  top: 0%;
+  margin: 5px 0;
+}
+
+.gif-wrapper {
+  width: 80%;
+  max-width:800px;
+  margin: auto;
+}
+
+.gif-wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.marquee {
+  width: 100vw;
+  overflow: hidden;
+  /*background-color: rgba(195, 203, 73, .5);
+  background: #fefefe;
+  color: #333;
+  border: 1px solid #4a4a4a;*/
+}
+
+.marquee h1 {
+  display: inline-block;
+  color: var(--orange);
+  margin: 0;
+  width: 100%;
+  font-family: "Margin", var(--fancy-font);
+  font-size: 48px;
+  font-weight: 300;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scroll-left 10s linear infinite;
+  -webkit-animation: scroll-left 10s linear infinite;
+  animation: bounce 10s linear infinite;
+}
+
+/* form styles */
+form {
+  border: 2px solid var(--dark);
+  width: 75%;
+  margin: auto;
+  padding: 0 1rem 1rem;
+  background-color: var(--lt-orange);
+  max-width: 900px;
+  font-family: var(--text);
+}
+
+form h3 {
+  border-bottom: 2px dotted var(--dark);
+  padding-bottom: 5px;
+  margin: 1rem 0;
+  color: var(--dark);
+  font-family: var(--brand-font);
+}
+
+.formSection {
+  margin: 0 1rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: left;
+  color: #fff;
+  font-family: var(--brand-font);
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.formSection input,
+.formSection textarea,
+.formSection select {
+  padding: 5px 0;
+  border: none;
+  border-bottom: var(--dark) 2px solid;
+  background-color: transparent;
+  color: var(--dark);
+  font-weight: 600;
+  font-family: var(--text);
+}
+.formSection textarea {
+  border: #7e3c1c 2px solid;
+  padding: 0.2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+input:focus,
+input::after,
+textarea:focus,
+select:focus {
+  background-color: #d26632;
+  outline: none;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--dark);
+  background-color: var(--y-green);
+  color: var(--dark);
+  font-weight: 500;
+  font-family: var(--brand-font);
+}
+
+.btn:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: var(--neon);
+}
+
+.btn:active {
+  transform: translate(0, 2%);
+}
+
+/* animatinos */
+@-moz-keyframes scroll-left {
+  0% {
+      -moz-transform: translateX(100%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      -moz-transform: translateX(-100%);
   }
+}
+
+@-webkit-keyframes scroll-left {
+  0% {
+      -webkit-transform: translateX(100%);
+  }
+  100% {
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+  }
+  100% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes bounce {
+  0% {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+  }
+  50% {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+  }
+  100% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
 }

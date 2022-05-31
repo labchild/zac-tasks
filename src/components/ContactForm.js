@@ -53,8 +53,9 @@ const ContactForm = () => {
   // return jsx
   return (
     <form onSubmit={handleRSVP}>
-      <div>
-        <label htmlFor="name">who are you? (you gotta tell me)</label>
+        <h3 className="bookman">répondez s'il vous plaît</h3>
+      <div className="formSection">
+        <label htmlFor="name">who are you? </label>
         <input
           placeholder="name"
           name="name"
@@ -65,7 +66,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <div>
+      <div className="formSection">
         <label htmlFor="email">your deets: </label>
         <input
           placeholder="email"
@@ -77,7 +78,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <div>
+      <div className="formSection">
         <label htmlFor="rsvp">will you be celebrating with us?</label>
         <select
           name="rsvp"
@@ -95,11 +96,11 @@ const ContactForm = () => {
           </option>
         </select>
       </div>
-      <div>
-        <label htmlFor="message">anything else you you wanna say?</label>
+      <div className="formSection">
+        <label htmlFor="message">anything else you wanna say?</label>
         <textarea id="message" name="message" />
       </div>
-      <button type="submit">{buttonState}</button>
+      <button type="submit" className="bookman btn">{buttonState}</button>
     </form>
   );
 };
