@@ -23,6 +23,17 @@ function Flyer() {
       </section>
       <article className="info">
         <h3>ZAC IS TURNING 30</h3>
+        <div className="update">
+          <h4>TODAY IS THE DAY</h4>
+          <p>
+            it's not raining in south brooklyn (yet!), so we'll be at Chilo's
+            until the weather says otherwise!
+            <br />
+            <br />
+            reach out to Lelah at anytime to find out where we are – their
+            number is <a href="tel:6126956190">612.695.6190</a>
+          </p>
+        </div>
         <p>
           Join to celebrate the man we all know and love as he officially enters
           his <em>early 30s</em>.

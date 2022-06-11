@@ -122,6 +122,16 @@ address:hover {
   background-color: var(--neon);
 }
 
+.update {
+  text-align: center;
+  border: var(--denim) 2px solid;
+  background-color: var(--y-green);
+}
+
+.update p {
+  text-align: center;
+}
+
 /* form styles */
 form {
   border: 2px solid var(--dark);
